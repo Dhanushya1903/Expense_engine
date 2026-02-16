@@ -200,7 +200,7 @@ In real enterprise systems:
 - Storage uses relational or NoSQL databases
 - Approval engines connect via APIs
 
-Conclusion
+## Conclusion
 
 This project demonstrates an explainable, rule-based approval system suitable for enterprise expense automation.
 
