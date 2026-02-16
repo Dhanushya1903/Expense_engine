@@ -1,0 +1,36 @@
+{
+  "rules": [
+    {
+      "name": "Receipt Check",
+      "field": "receipt_uploaded",
+      "operator": "==",
+      "value": false,
+      "decision": "REJECT",
+      "reason": "Receipt not uploaded."
+    },
+    {
+      "name": "Low Policy Compliance",
+      "field": "policy_compliance_score",
+      "operator": "<",
+      "value": 60,
+      "decision": "REJECT",
+      "reason": "Expense violates company policy."
+    },
+    {
+      "name": "High Expense Amount",
+      "field": "expense_amount",
+      "operator": ">",
+      "value": 10000,
+      "decision": "REVIEW",
+      "reason": "Expense exceeds auto approval limit."
+    },
+    {
+      "name": "Monthly Limit Exceeded",
+      "field": "monthly_expense_total",
+      "operator": ">",
+      "value": 50000,
+      "decision": "REVIEW",
+      "reason": "Monthly expense threshold exceeded."
+    }
+  ]
+}

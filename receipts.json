@@ -1,0 +1,26 @@
+{
+  "used_receipts": [
+    "R15",
+    "R13"
+  ],
+  "expense_history": [
+    {
+      "employee_id": "E105",
+      "expense_type": "travel",
+      "expense_amount": 250.0,
+      "monthly_expense_total": 1000.0,
+      "receipt_uploaded": true,
+      "receipt_id": "R15",
+      "employee_level": "L1"
+    },
+    {
+      "employee_id": "E105",
+      "expense_type": "food",
+      "expense_amount": 300.0,
+      "monthly_expense_total": 4000.0,
+      "receipt_uploaded": true,
+      "receipt_id": "R13",
+      "employee_level": "L1"
+    }
+  ]
+}
