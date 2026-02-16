@@ -1,7 +1,10 @@
 {
   "used_receipts": [
     "R15",
-    "R13"
+    "R13",
+    "R16",
+    "R20",
+    "R55"
   ],
   "expense_history": [
     {
@@ -20,6 +23,33 @@
       "monthly_expense_total": 4000.0,
       "receipt_uploaded": true,
       "receipt_id": "R13",
+      "employee_level": "L1"
+    },
+    {
+      "employee_id": "E107",
+      "expense_type": "food",
+      "expense_amount": 750.0,
+      "monthly_expense_total": 3000.0,
+      "receipt_uploaded": true,
+      "receipt_id": "R16",
+      "employee_level": "L1"
+    },
+    {
+      "employee_id": "E115",
+      "expense_type": "accommodation",
+      "expense_amount": 4000.0,
+      "monthly_expense_total": 50000.0,
+      "receipt_uploaded": true,
+      "receipt_id": "R20",
+      "employee_level": "L1"
+    },
+    {
+      "employee_id": "1130",
+      "expense_type": "food",
+      "expense_amount": 300.0,
+      "monthly_expense_total": 450.0,
+      "receipt_uploaded": true,
+      "receipt_id": "R55",
       "employee_level": "L1"
     }
   ]

@@ -1,0 +1,27 @@
+{
+  "rejections": [
+    {
+      "employee_id": "E12",
+      "expense_type": "food",
+      "expense_amount": 3000.0,
+      "monthly_expense_total": 50000.0,
+      "receipt_uploaded": false,
+      "receipt_id": "nil",
+      "reasons": [
+        "Invalid employee ID."
+      ]
+    },
+    {
+      "employee_id": "E111",
+      "expense_type": "food",
+      "expense_amount": 450.0,
+      "monthly_expense_total": 400.0,
+      "receipt_uploaded": false,
+      "receipt_id": null,
+      "employee_level": "L1",
+      "reasons": [
+        "Receipt required."
+      ]
+    }
+  ]
+}

@@ -1,21 +1,73 @@
 from rule_engine import ApprovalEngine
+import sys
+
+
+EXPENSE_MENU = {
+    "1": "food",
+    "2": "accommodation",
+    "3": "travel",
+    "4": "transport",
+    "5": "office_supplies",
+    "6": "training",
+    "7": "client_meeting"
+}
+
+
+def reject_and_exit(message):
+    print("\nInput Rejected")
+    print("----------------")
+    print("Reason:", message)
+    sys.exit()
 
 
 def get_user_input():
     print("\nEnter Expense Details")
     print("----------------------")
 
-    employee_id = input("Employee ID (E101–E400): ")
+    employee_id = input("Employee ID : ").strip()
+    if not employee_id:
+        reject_and_exit("Employee ID cannot be empty.")
 
-    expense_type = input("Expense Type (travel/food/hotel): ")
+    print("\nSelect Expense Type:")
+    print("1. Food")
+    print("2. Accommodation")
+    print("3. Travel")
+    print("4. Transport")
+    print("5. Office Supplies")
+    print("6. Training")
+    print("7. Client Meeting")
 
-    expense_amount = float(input("Expense Amount: "))
-    monthly_expense_total = float(input("Monthly Expense Total: "))
+    expense_choice = input("Enter choice number: ").strip()
+
+    if expense_choice not in EXPENSE_MENU:
+        reject_and_exit("Invalid expense choice.")
+
+    expense_type = EXPENSE_MENU[expense_choice]
+
+    amount_input = input("Expense Amount: ").strip()
+    if not amount_input:
+        reject_and_exit("Expense amount required.")
+
+    expense_amount = float(amount_input)
+
+    monthly_input = input("Monthly Expense Total: ").strip()
+    if not monthly_input:
+        reject_and_exit("Monthly total required.")
+
+    monthly_expense_total = float(monthly_input)
 
     receipt_input = input("Receipt Available? (yes/no): ").strip().lower()
+
+    if receipt_input not in ["yes", "no"]:
+        reject_and_exit("Enter yes or no for receipt.")
+
     receipt_uploaded = receipt_input == "yes"
 
-    receipt_id = input("Receipt ID: ")
+    receipt_id = None
+    if receipt_uploaded:
+        receipt_id = input("Receipt ID: ").strip()
+        if not receipt_id:
+            reject_and_exit("Receipt ID required.")
 
     return {
         "employee_id": employee_id,
