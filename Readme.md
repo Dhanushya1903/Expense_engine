@@ -87,22 +87,26 @@ Expenses are stored based on outcome:
 
 ## Project Structure
 
+```text
 expense_engine/
 │
-├── main.py # Program entry point
-├── rule_engine.py # Approval engine logic
-├── employees.json # Employee level mapping
-├── receipts.json # Approved expense records
-├── reviews.json # Review expense records
-├── rejections.json # Rejected expense records
+├── main.py              # Program entry point
+├── rule_engine.py       # Approval engine logic
+├── employees.json       # Employee level mapping
+├── rules.json           # Expense validation rules
 │
-├── inputs/ # JSON input cases
-│ ├── approve.json
-│ ├── review.json
-│ └── reject.json
+├── receipts.json        # Approved expense records
+├── reviews.json         # Review expense records
+├── rejections.json      # Rejected expense records
 │
-└── README.md
-
+├── inputs/              # Sample JSON input cases
+│   ├── approve.json
+│   ├── review.json
+│   └── reject.json
+│
+├── __pycache__/         # Python cache files
+└── README.md            # Project documentation
+```
 
 
 ## How the System Works
@@ -173,61 +177,26 @@ Example:
   }
 }
 
-Edge Cases Handled
+## Edge Cases Handled
 
 The engine handles:
 
-Invalid employee IDs
+- Invalid employee IDs
+- Negative expense values
+- Missing receipts
+- Duplicate receipts
+- Invalid expense categories
+- Monthly limit violations
+- Fraud patterns
+- Empty or incorrect inputs
 
-Negative expense values
-
-Missing receipt
-
-Duplicate receipts
-
-Invalid categories
-
-Monthly limit violations
-
-Fraud patterns
-
-Empty or incorrect inputs
-
-Scalability Considerations
+### Scalability Considerations
 
 In real enterprise systems:
 
-Employee data comes from HR databases
-
-Storage uses relational or NoSQL databases
-
-Approval engines connect via APIs
-
-This project simulates such architecture using JSON files.
-
-Technologies Used
-
-Python
-
-JSON configuration files
-
-Rule-based decision logic
-
-Future Improvements
-
-Possible upgrades:
-
-Web or mobile UI
-
-Database integration
-
-Manager approval workflow
-
-OCR receipt verification
-
-API integration
-
-Fraud analytics engine
+- Employee data typically comes from HR databases
+- Storage uses relational or NoSQL databases
+- Approval engines connect via APIs
 
 Conclusion
 
