@@ -1,0 +1,10 @@
+{
+  "expense": {
+    "employee_id": "1001",
+    "expense_type": "food",
+    "expense_amount": -500,
+    "monthly_expense_total": 4000,
+    "receipt_uploaded": true,
+    "receipt_id": "R5008"
+  }
+}

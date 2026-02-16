@@ -41,9 +41,7 @@ class ApprovalEngine:
 
     MONTHLY_LIMIT = 50000
 
-    # -------------------------
     # Generic file loader
-    # -------------------------
     def load_file(self, file, default):
         if not os.path.exists(file):
             return default
@@ -55,25 +53,19 @@ class ApprovalEngine:
         with open(file, "w") as f:
             json.dump(data, f, indent=2)
 
-    # -------------------------
     # Get employee level
-    # -------------------------
     def get_employee_level(self, employee_id):
         data = self.load_file(self.EMPLOYEE_FILE, {"employees": {}})
         employees = data.get("employees", {})
         return employees.get(employee_id)
 
-    # -------------------------
     # Duplicate receipt check
-    # -------------------------
     def is_duplicate_receipt(self, receipt_id):
         data = self.load_file(self.RECEIPT_FILE,
                               {"used_receipts": [], "expense_history": []})
         return receipt_id in data["used_receipts"]
 
-    # -------------------------
     # Store approved expense
-    # -------------------------
     def store_approved(self, receipt_id, expense):
         data = self.load_file(self.RECEIPT_FILE,
                               {"used_receipts": [], "expense_history": []})
@@ -83,9 +75,7 @@ class ApprovalEngine:
 
         self.save_file(self.RECEIPT_FILE, data)
 
-    # -------------------------
     # Store review expense
-    # -------------------------
     def store_review(self, expense, reasons):
         data = self.load_file(self.REVIEW_FILE, {"reviews": []})
 
@@ -95,9 +85,7 @@ class ApprovalEngine:
         data["reviews"].append(record)
         self.save_file(self.REVIEW_FILE, data)
 
-    # -------------------------
     # Store rejected expense
-    # -------------------------
     def store_rejection(self, expense, reasons):
         data = self.load_file(self.REJECTION_FILE, {"rejections": []})
 
@@ -107,9 +95,7 @@ class ApprovalEngine:
         data["rejections"].append(record)
         self.save_file(self.REJECTION_FILE, data)
 
-    # -------------------------
     # Fraud detection
-    # -------------------------
     def frequent_small_claims(self, employee_id):
         data = self.load_file(self.RECEIPT_FILE,
                               {"used_receipts": [], "expense_history": []})
@@ -122,9 +108,7 @@ class ApprovalEngine:
 
         return len(small_claims) >= 5
 
-    # -------------------------
     # Policy compliance score
-    # -------------------------
     def calculate_policy_score(self, expense):
         total_rules = 4
         passed = 0
@@ -148,9 +132,7 @@ class ApprovalEngine:
 
         return (passed / total_rules) * 100
 
-    # -------------------------
     # Decision engine
-    # -------------------------
     def evaluate(self, expense):
 
         decision_path = []

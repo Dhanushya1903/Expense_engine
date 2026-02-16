@@ -1,0 +1,10 @@
+{
+  "expense": {
+    "employee_id": "1020",
+    "expense_type": "travel",
+    "expense_amount": 6000,
+    "monthly_expense_total": 60000,
+    "receipt_uploaded": true,
+    "receipt_id": "R5003"
+  }
+}

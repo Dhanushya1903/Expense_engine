@@ -4,7 +4,8 @@
     "R13",
     "R16",
     "R20",
-    "R55"
+    "R55",
+    "R5001"
   ],
   "expense_history": [
     {
@@ -50,6 +51,15 @@
       "monthly_expense_total": 450.0,
       "receipt_uploaded": true,
       "receipt_id": "R55",
+      "employee_level": "L1"
+    },
+    {
+      "employee_id": "1001",
+      "expense_type": "food",
+      "expense_amount": 1200,
+      "monthly_expense_total": 8000,
+      "receipt_uploaded": true,
+      "receipt_id": "R5001",
       "employee_level": "L1"
     }
   ]
