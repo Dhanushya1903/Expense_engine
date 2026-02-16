@@ -176,6 +176,8 @@ Example:
     "receipt_id": "R5001"
   }
 }
+```
+
 
 ## Edge Cases Handled
 
