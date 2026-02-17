@@ -131,23 +131,23 @@ expense_engine/
 ## Decision Flow
 
 Input Validation
-      ↓
+↓
 Employee Lookup
-      ↓
+↓
 Expense Category Validation
-      ↓
+↓
 Duplicate Receipt Check
-      ↓
+↓
 Fraud Detection
-      ↓
+↓
 Policy Compliance Calculation
-      ↓
+↓
 Monthly Limit Evaluation
-      ↓
+↓
 Category Limit Evaluation
-      ↓
+↓
 Decision Output
-      ↓
+↓
 Decision Storage
 
 
