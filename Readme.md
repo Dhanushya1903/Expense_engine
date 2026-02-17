@@ -130,8 +130,6 @@ expense_engine/
 
 ## Decision Flow
 
-## Decision Flow
-
 ```text
 Input Validation
         ↓
