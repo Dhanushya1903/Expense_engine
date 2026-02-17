@@ -1,0 +1,21 @@
+{
+  "decision": "APPROVE",
+  "decision_path": [
+    "Employee level detected: L1",
+    "Receipt ID unique",
+    "Policy score = 100%",
+    "All checks passed \u2192 APPROVE"
+  ],
+  "reasons": [
+    "Expense approved automatically."
+  ],
+  "expense": {
+    "employee_id": "1001",
+    "expense_type": "food",
+    "expense_amount": 1200,
+    "monthly_expense_total": 8000,
+    "receipt_uploaded": true,
+    "receipt_id": "",
+    "employee_level": "L1"
+  }
+}

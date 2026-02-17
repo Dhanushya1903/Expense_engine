@@ -34,6 +34,77 @@
       "reasons": [
         "Expense must be positive."
       ]
+    },
+    {
+      "employee_id": "1001",
+      "expense_type": "food",
+      "expense_amount": 1200,
+      "monthly_expense_total": 8000,
+      "receipt_uploaded": true,
+      "receipt_id": "R5001",
+      "employee_level": "L1",
+      "reasons": [
+        "Receipt already used."
+      ]
+    },
+    {
+      "employee_id": "1001",
+      "expense_type": "food",
+      "expense_amount": 1200,
+      "monthly_expense_total": 8000,
+      "receipt_uploaded": true,
+      "receipt_id": "R5001",
+      "employee_level": "L1",
+      "reasons": [
+        "Receipt already used."
+      ]
+    },
+    {
+      "employee_id": "1001",
+      "expense_type": "gaming",
+      "expense_amount": 1000,
+      "monthly_expense_total": 4000,
+      "receipt_uploaded": true,
+      "receipt_id": "R5007",
+      "employee_level": "L1",
+      "reasons": [
+        "Unsupported expense category."
+      ]
+    },
+    {
+      "employee_id": "9999",
+      "expense_type": "food",
+      "expense_amount": 1000,
+      "monthly_expense_total": 5000,
+      "receipt_uploaded": true,
+      "receipt_id": "R5006",
+      "reasons": [
+        "Employee not found."
+      ]
+    },
+    {
+      "employee_id": "1030",
+      "expense_type": "food",
+      "expense_amount": 1000,
+      "monthly_expense_total": 5000,
+      "receipt_uploaded": false,
+      "receipt_id": null,
+      "employee_level": "L3",
+      "reasons": [
+        "Receipt required."
+      ]
+    },
+    {
+      "employee_id": "1001",
+      "expense_type": "food",
+      "expense_amount": -500,
+      "monthly_expense_total": 4000,
+      "receipt_uploaded": true,
+      "receipt_id": "R5008",
+      "employee_level": "L1",
+      "reasons": [
+        "Expense must be positive."
+      ]
     }
   ]
 }

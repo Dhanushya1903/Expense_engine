@@ -1,0 +1,21 @@
+{
+  "decision": "REVIEW",
+  "decision_path": [
+    "Employee level detected: L1",
+    "Receipt ID unique",
+    "Policy score = 75%",
+    "Category limit exceeded \u2192 REVIEW"
+  ],
+  "reasons": [
+    "Expense exceeds allowed limit."
+  ],
+  "expense": {
+    "employee_id": "1001",
+    "expense_type": "food",
+    "expense_amount": 3000,
+    "monthly_expense_total": 9000,
+    "receipt_uploaded": true,
+    "receipt_id": "R5002",
+    "employee_level": "L1"
+  }
+}

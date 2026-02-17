@@ -1,0 +1,19 @@
+{
+  "decision": "REJECT",
+  "decision_path": [
+    "Employee level detected: L1",
+    "Duplicate receipt \u2192 REJECT"
+  ],
+  "reasons": [
+    "Receipt already used."
+  ],
+  "expense": {
+    "employee_id": "1001",
+    "expense_type": "food",
+    "expense_amount": 1200,
+    "monthly_expense_total": 8000,
+    "receipt_uploaded": true,
+    "receipt_id": "R5001",
+    "employee_level": "L1"
+  }
+}

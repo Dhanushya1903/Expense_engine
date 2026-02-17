@@ -1,0 +1,21 @@
+{
+  "decision": "REVIEW",
+  "decision_path": [
+    "Employee level detected: L2",
+    "Receipt ID unique",
+    "Policy score = 75%",
+    "Monthly limit exceeded \u2192 REVIEW"
+  ],
+  "reasons": [
+    "Monthly expense exceeds limit."
+  ],
+  "expense": {
+    "employee_id": "1020",
+    "expense_type": "travel",
+    "expense_amount": 6000,
+    "monthly_expense_total": 60000,
+    "receipt_uploaded": true,
+    "receipt_id": "R5003",
+    "employee_level": "L2"
+  }
+}

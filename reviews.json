@@ -11,6 +11,30 @@
       "reasons": [
         "Expense exceeds allowed limit."
       ]
+    },
+    {
+      "employee_id": "1001",
+      "expense_type": "food",
+      "expense_amount": 3000,
+      "monthly_expense_total": 9000,
+      "receipt_uploaded": true,
+      "receipt_id": "R5002",
+      "employee_level": "L1",
+      "reasons": [
+        "Expense exceeds allowed limit."
+      ]
+    },
+    {
+      "employee_id": "1020",
+      "expense_type": "travel",
+      "expense_amount": 6000,
+      "monthly_expense_total": 60000,
+      "receipt_uploaded": true,
+      "receipt_id": "R5003",
+      "employee_level": "L2",
+      "reasons": [
+        "Monthly expense exceeds limit."
+      ]
     }
   ]
 }

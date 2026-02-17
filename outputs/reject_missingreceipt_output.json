@@ -1,0 +1,21 @@
+{
+  "decision": "REJECT",
+  "decision_path": [
+    "Employee level detected: L3",
+    "Receipt ID unique",
+    "Policy score = 75%",
+    "Receipt missing \u2192 REJECT"
+  ],
+  "reasons": [
+    "Receipt required."
+  ],
+  "expense": {
+    "employee_id": "1030",
+    "expense_type": "food",
+    "expense_amount": 1000,
+    "monthly_expense_total": 5000,
+    "receipt_uploaded": false,
+    "receipt_id": null,
+    "employee_level": "L3"
+  }
+}

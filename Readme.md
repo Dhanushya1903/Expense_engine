@@ -90,22 +90,29 @@ Expenses are stored based on outcome:
 ```text
 expense_engine/
 │
-├── main.py              # Program entry point
-├── rule_engine.py       # Approval engine logic
-├── employees.json       # Employee level mapping
-├── rules.json           # Expense validation rules
+├── main.py                # Program entry point
+├── rule_engine.py         # Approval engine logic
+├── employees.json         # Employee level mapping
+├── rules.json             # Optional configurable rules
 │
-├── receipts.json        # Approved expense records
-├── reviews.json         # Review expense records
-├── rejections.json      # Rejected expense records
+├── receipts.json          # Approved expense records
+├── reviews.json           # Review expense records
+├── rejections.json        # Rejected expense records
 │
-├── inputs/              # Sample JSON input cases
+├── inputs/                # Sample JSON input cases
 │   ├── approve.json
 │   ├── review.json
-│   └── reject.json
+│   ├── reject.json
+│   └── edge_cases.json
 │
-├── __pycache__/         # Python cache files
-└── README.md            # Project documentation
+├── outputs/               # Auto-generated decision outputs
+│   ├── approve_output.json
+│   ├── review_output.json
+│   └── reject_output.json
+│
+├── __pycache__/           # Python compiled cache (auto-generated)
+│
+└── README.md              # Project documentation
 ```
 
 
@@ -127,15 +134,21 @@ Input Validation
       ↓
 Employee Lookup
       ↓
+Expense Category Validation
+      ↓
 Duplicate Receipt Check
       ↓
 Fraud Detection
       ↓
-Policy Compliance Check
+Policy Compliance Calculation
       ↓
-Limit Evaluation
+Monthly Limit Evaluation
+      ↓
+Category Limit Evaluation
       ↓
 Decision Output
+      ↓
+Decision Storage
 
 
 

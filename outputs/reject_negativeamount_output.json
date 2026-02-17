@@ -1,0 +1,18 @@
+{
+  "decision": "REJECT",
+  "decision_path": [
+    "Invalid expense"
+  ],
+  "reasons": [
+    "Expense must be positive."
+  ],
+  "expense": {
+    "employee_id": "1001",
+    "expense_type": "food",
+    "expense_amount": -500,
+    "monthly_expense_total": 4000,
+    "receipt_uploaded": true,
+    "receipt_id": "R5008",
+    "employee_level": "L1"
+  }
+}

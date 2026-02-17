@@ -1,0 +1,18 @@
+{
+  "decision": "REJECT",
+  "decision_path": [
+    "Invalid category"
+  ],
+  "reasons": [
+    "Unsupported expense category."
+  ],
+  "expense": {
+    "employee_id": "1001",
+    "expense_type": "gaming",
+    "expense_amount": 1000,
+    "monthly_expense_total": 4000,
+    "receipt_uploaded": true,
+    "receipt_id": "R5007",
+    "employee_level": "L1"
+  }
+}

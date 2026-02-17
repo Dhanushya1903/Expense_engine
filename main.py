@@ -13,17 +13,36 @@ def load_input_file(file_path):
         data = json.load(f)
 
     if "expense" not in data:
-        print("Invalid input format. 'expense' field missing.")
+        print("Invalid input format.")
         sys.exit()
 
     return data["expense"]
 
 
+def save_output(input_file, decision, path, reasons, expense):
+    os.makedirs("outputs", exist_ok=True)
+
+    base_name = os.path.basename(input_file)
+    name_without_ext = os.path.splitext(base_name)[0]
+
+    output_file = f"outputs/{name_without_ext}_output.json"
+
+    result = {
+        "decision": decision,
+        "decision_path": path,
+        "reasons": reasons,
+        "expense": expense
+    }
+
+    with open(output_file, "w") as f:
+        json.dump(result, f, indent=2)
+
+    print("\nOutput stored in:", output_file)
+
+
 def main():
-    # Check if file path provided
     if len(sys.argv) < 2:
-        print("Usage:")
-        print("python main.py <input_file.json>")
+        print("Usage: python main.py <input_file.json>")
         sys.exit()
 
     input_file = sys.argv[1]
@@ -45,6 +64,8 @@ def main():
     print("\nReason Summary:")
     for r in reasons:
         print("-", r)
+
+    save_output(input_file, decision, path, reasons, expense_data)
 
 
 if __name__ == "__main__":
